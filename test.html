@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>interactive button</title>
+    <style type="text/css">
+        .smsCode {
+            display: inline-block;
+            height: 40px;
+            color: #FFF;
+            font-weight: bold;
+            line-height: 42px;
+            margin: 6px 0;
+            text-align: center;
+            border: 1px solid #4596AB;
+            background: #53B3CC;
+            border-radius: 2px;
+            width: 33%;
+            font-size: 14px;
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <span class="smsCode i-btn" data-ibtn-class="active" data-ibtn-text="已发送">发送验证码</span>
+
+    <script src="//zeptojs.com/zepto.js" charset="utf-8"></script>
+    <script src="ibtn.js"></script>
+    <script>
+        $(function() {
+            $(function() {
+                $.initIBtn();
+            });
+
+            function beforeReset() {
+                alert('before reset')
+            }
+        });
+    </script>
+</body>
+</html>
